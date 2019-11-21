@@ -24,7 +24,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         {statusbar}
 
-        <Header title="first task?" />
+        <Header title="TodoApp!" />
       </View>
     );
   }
