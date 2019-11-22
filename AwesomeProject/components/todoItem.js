@@ -15,6 +15,11 @@ export default class TodoItem extends React.Component {
         <Text style={todoItem.done ? { color: "#AAAAAA" } : { color: "#000" }}>
           {todoItem.title}
         </Text>
+        <Button
+          title="REMOVE"
+          color={todoItem.done ? "rgba(200,0,0,0.5)" : "rgba(255,0,0,1)"}
+          onPress={() => this.props.removeTodo()}
+        />
       </TouchableOpacity>
     );
   }
@@ -28,7 +33,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingLeft: 15,
-    backgroundColor: "#FBEAFF"
+    paddingLeft: 15
   }
 });
